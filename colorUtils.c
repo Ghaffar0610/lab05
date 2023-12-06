@@ -23,7 +23,7 @@ int min(int x,int y,int z){
 int toGrayScaleLightness(int r , int g, int b){
 //lightness tech  (max(r,g,b)+min(r,g,b))/2;
 
-return  (max(r,g,b)+min(r,g,b))/2;
+return  (max(r*g*b)+min(r*g*b))/2;
 }
 
 int toGrayScaleLuminosity(int r, int g,int b)
