@@ -24,6 +24,11 @@ int toGrayScaleLightness(int r , int g, int b){
 return  (max(r,g,b)+min(r,g,b))/2;
 }
 
+int toGrayScaleLuminosity(int r, int g,int b)
+{
+  //GrayScaleLuminosity
+  return 0.21*r+0.72*g+0.07*b;
+}
 int toGrayScaleAverage(int r, int g, int b) {
   //TODO: test this, it may be wrong!
   return (r + g + b) / 3;
