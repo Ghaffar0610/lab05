@@ -1,4 +1,6 @@
-
+#include<stdlib.h>
+#include<stdio.h>
+#include<math.h>
 #include "colorUtils.h"
 
 double rgbIntToFloat(int c) {
@@ -27,7 +29,22 @@ return  (max(r,g,b)+min(r,g,b))/2;
 int toGrayScaleLuminosity(int r, int g,int b)
 {
   //GrayScaleLuminosity
-  return 0.21*r+0.72*g+0.07*b;
+  return  round(0.21*r+0.72*g+0.07*b);
+}
+
+
+
+//three func of sepia(red,green,blue)
+
+int toSepiaRed(int r, int g,int b){
+
+return round(0.393*r +0.769*g+ 0.189*b);
+}
+int toSepiaGreen(int r, int g,int b){
+return round(0.349*r+0.686*g+0.131*b);
+}
+int toSepiaBlue(int r, int g,int b){
+return round(0.272*r+0.534*g+0.131*b);
 }
 int toGrayScaleAverage(int r, int g, int b) {
   //TODO: test this, it may be wrong!
