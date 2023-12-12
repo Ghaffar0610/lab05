@@ -205,7 +205,19 @@ printf("TESTING: min(%d,%d,%d): ", z, x, x);
     numPassed++;
   }
 
-
+//lightness function
+r = 20, g = 25, b = 30;
+  expectedResult = 25;
+  printf("TESTING: toGrayScaleLightness(%d,%d,%d): ", r, g, b);
+  result = toGrayScaleLightness(r, g, b);
+  
+  if(result != expectedResult) {
+    printf("FAILED: toGrayScaleLightness returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
 
 
   printf("Number Test Cases Passed: %6d\n", numPassed);
