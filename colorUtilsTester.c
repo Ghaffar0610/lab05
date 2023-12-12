@@ -193,6 +193,21 @@ int main(int argc, char **argv) {
   //        toSepiaRed(), toSepiaGreen(), toSepiaBlue()
   //       for at least 6 and a total of at least 20
 
+// Minimum Function
+
+printf("TESTING: min(%d,%d,%d): ", z, x, x);
+  result = min(z, x, x);
+  if(result != 30) {
+    printf("FAILED: min returned %d, expected 30\n", result);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
+
+
+
+
   printf("Number Test Cases Passed: %6d\n", numPassed);
   printf("Number Test Cases Failed: %6d\n", numFailed);
   printf("Percent Passed:           %6.2f\n", 100.0 * numPassed / (numPassed + numFailed));
