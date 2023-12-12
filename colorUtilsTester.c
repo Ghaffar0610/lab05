@@ -197,8 +197,8 @@ int main(int argc, char **argv) {
 
 printf("TESTING: min(%d,%d,%d): ", x, y, z);
   result = min(x, y, z);
-  if(result != 30) {
-    printf("FAILED: min returned %d, expected 30\n", result);
+  if(result != 10) {
+    printf("FAILED: min returned %d, expected 10\n", result);
     numFailed++;
   } else {
     printf("PASSED\n");
@@ -285,3 +285,32 @@ r = 33, g = 43, b = 60;
 int isClose(double a, double b) {
   return (fabs(a-b) < DELTA);
 }
+
+  //OUTPUT
+
+// PS C:\Users\hp\OneDrive\Desktop\PF LAB WORK\CSCE155-C-Lab05> make colorUtilsTester      
+// gcc -std=gnu99 -Wall colorUtils.o colorUtilsTester.c -o colorUtilsTester -lm
+// PS C:\Users\hp\OneDrive\Desktop\PF LAB WORK\CSCE155-C-Lab05> .\colorUtilsTester.exe
+// TESTING: rgbIntToFloat(123): PASSED
+// TESTING: rgbIntToFloat(53): PASSED
+// TESTING: max(10,20,30): PASSED
+// TESTING: max(10,30,20): PASSED
+// TESTING: max(20,10,30): PASSED
+// TESTING: max(20,30,10): PASSED
+// TESTING: max(30,10,20): PASSED
+// TESTING: max(30,20,10): PASSED
+// TESTING: max(10,10,30): PASSED
+// TESTING: max(10,30,10): PASSED
+// TESTING: max(30,10,10): PASSED
+// TESTING: max(30,30,30): PASSED
+// TESTING: toGrayScaleAverage(255,0,0): PASSED
+// TESTING: toGrayScaleAverage(100,39,40): FAILED: toGrayScaleAverage returned 59, expected 60
+// TESTING: min(10,20,30): PASSED
+// TESTING: toGrayScaleLightness(20,25,30): PASSED
+// TESTING: toGrayScaleLuminosity(50,78,55): PASSED
+// TESTING: toSepiaRed(17,11,32): PASSED
+// TESTING: toSepiaGreen(27,33,52): PASSED
+// TESTING: toSepiaBlue(33,43,60): PASSED
+// Number Test Cases Passed:     19
+// Number Test Cases Failed:      1
+// Percent Passed:            95.00
