@@ -257,6 +257,19 @@ r = 27, g = 33, b = 52;
     printf("PASSED\n");
     numPassed++;
   }
+  // Sepia blue funct
+r = 33, g = 43, b = 60;
+  expectedResult = 40;
+  printf("TESTING: toSepiaBlue(%d,%d,%d): ", r, g, b);
+  result = toSepiaBlue(r, g, b);
+  
+  if(result != expectedResult) {
+    printf("FAILED: toSepiaBlue returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
   printf("Number Test Cases Passed: %6d\n", numPassed);
   printf("Number Test Cases Failed: %6d\n", numFailed);
   printf("Percent Passed:           %6.2f\n", 100.0 * numPassed / (numPassed + numFailed));
