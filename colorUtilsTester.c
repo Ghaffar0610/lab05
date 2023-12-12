@@ -218,7 +218,19 @@ r = 20, g = 25, b = 30;
     printf("PASSED\n");
     numPassed++;
   }
-
+// lumi function
+r = 50, g = 78, b = 55;
+  expectedResult = 70;
+  printf("TESTING: toGrayScaleLuminosity(%d,%d,%d): ", r, g, b);
+  result = toGrayScaleLuminosity(r, g, b);
+  
+  if(result != expectedResult) {
+    printf("FAILED: toGrayScaleLuminosity returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
 
   printf("Number Test Cases Passed: %6d\n", numPassed);
   printf("Number Test Cases Failed: %6d\n", numFailed);
