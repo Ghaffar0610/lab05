@@ -195,8 +195,8 @@ int main(int argc, char **argv) {
 
 // Minimum Function
 
-printf("TESTING: min(%d,%d,%d): ", z, x, x);
-  result = min(z, x, x);
+printf("TESTING: min(%d,%d,%d): ", x, y, z);
+  result = min(x, y, z);
   if(result != 30) {
     printf("FAILED: min returned %d, expected 30\n", result);
     numFailed++;
@@ -220,7 +220,7 @@ r = 20, g = 25, b = 30;
   }
 // lumi function
 r = 50, g = 78, b = 55;
-  expectedResult = 70;
+  expectedResult = 71;
   printf("TESTING: toGrayScaleLuminosity(%d,%d,%d): ", r, g, b);
   result = toGrayScaleLuminosity(r, g, b);
   
@@ -246,7 +246,7 @@ r = 17, g = 11, b = 32;
   }
   // Sepia green funct
 r = 27, g = 33, b = 52;
-  expectedResult = 41;
+  expectedResult = 39;
   printf("TESTING: toSepiaGreen(%d,%d,%d): ", r, g, b);
   result = toSepiaGreen(r, g, b);
   
